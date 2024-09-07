@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paareees Perfume</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/pp-fav.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- topbar start  -->
+    <div class="container-fluid topbar">
+      <div class="container topbar-inner">
+        <div class="row pt-2">
+          <div class="col-md-6">Monday - Friday 8:00 AM - 9:00 PM</div>
+          <div class="col-md-6 topbar-pg-list d-flex justify-content-end">
+            <ul>
+              <li><a href="../about.html">About Us</a></li>
+              <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- topbar end  -->
+    <!-- navbar start  -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" id="logo-Title" href="../index.html"
+          >Paareees Perfumes</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../product-archive.html">Products</a>
+            </li>
+            <!-- dropdown start  -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Brands
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="../archive/calvin-klein.html"
+                    >Calvin Klein</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../archive/j-dot.html"
+                    >J. Jamshed</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../archive/christian-dior.html"
+                    >Christiab Dior</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../archive/versace.html"
+                    >Versace</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- dropdown end  -->
+            <!-- dropdown 2 start  -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Category
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="../archive/category.html#men"
+                    >Male
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../archive/category.html#female"
+                    >Female</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../archive/category.html#unisex"
+                    >Unisex</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- dropdown 2 end  -->
+          </ul>
+          <div class="nav-icons-fa">
+            <!-- <button type="button" class="btn btn-primary">
+              <span class="material-symbols-outlined"> person </span>
+            </button> -->
+            <button type="button" class="btn btn-primary" id="cart-btn">
+              <span class="material-symbols-outlined"
+                >shopping_cart_checkout</span
+              >
+              Cart <span id="selected-count">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end  -->
+    <!-- single product start  -->
+    <div class="container-fluid sp mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 img-box">
+            <img
+              id="fimg"
+              src="../assets/brands/calvin-klein/w-Calvin Klein Eternity Reflections  For Women.jpg"
+            />
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 sp-info">
+            <div class="info-content">
+              <div class="back">
+                <a href="../index.html#cat-sec" class="btn-link-fa">
+                  <span class="material-symbols-outlined"> arrow_back </span></a
+                >
+                <p>Back to Categories</p>
+              </div>
+              <div class="review-stars">
+                <span class="material-icons"> star </span>
+                <span class="material-icons"> star </span>
+                <span class="material-icons"> star </span>
+                <span class="material-symbols-outlined"> star </span>
+                <span class="material-symbols-outlined"> star </span>
+              </div>
+              <h1 id="ptitle">Calvin Klein Eternity Reflections</h1>
+              <p>
+                PEGASUS EAU DE PARFUM is an indulgent luxury fragrance that
+                imparts sophistication and elegance. Crafted with a unique blend
+                of...
+              </p>
+              <div class="sp-price">
+                <b>$12.00</b>
+                <span>$16.00</span>
+              </div>
+              <div class="quantity">
+                <button class="btn btn-outline-secondary decrement">-</button>
+                <input
+                  type="number"
+                  class="form-control quantity-input"
+                  value="1"
+                  min="1"
+                />
+                <button class="btn btn-outline-secondary increment">+</button>
+              </div>
+              <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-6">
+                  <button type="button" class="btn btn-primary w-100 cart">
+                    <span class="material-symbols-outlined">
+                      shopping_cart_checkout </span
+                    >Add to Cart
+                  </button>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                  <button type="button" class="btn cart btn-primary w-100">
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+              <div class="buy-btn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 2nd Section Start  -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 sp-des">
+          <span>Perfume</span>
+          <h1>Paareees Perfume</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+            explicabo doloremque sed assumenda est, culpa quas ipsa cumque nemo
+            quisquam dolor laudantium numquam ut facere, sunt eligendi
+            voluptatum nisi iusto!
+          </p>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <button type="button" class="btn btn-primary w-30">
+                  <span class="material-symbols-outlined"> visibility </span
+                  >View Item
+                </button>
+              </div>
+              <div class="col-md-8 col-sm-12"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <img src="../assets/img/decs-img.png" class="sp-des-img" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- 2nd Section End  -->
+    <!-- 3rd Section Start -->
+    <!-- review sec  -->
+    <div class="container mt-5">
+      <div class="row text-center">
+        <div class="col-12"><h2>Customer Reviews</h2></div>
+        <div class="col-6">
+          <div class="review-stars">
+            <span class="material-icons"> star </span>
+            <span class="material-icons"> star </span>
+            <span class="material-icons"> star </span>
+            <span class="material-symbols-outlined"> star </span>
+            <span class="material-symbols-outlined"> star </span>
+          </div>
+          <br />
+          be the first to write a review
+        </div>
+        <div class="col-6 d-flex justify-content-center">
+          <button type="button" class="btn btn-primary review-btn">
+            Write Review
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-1">
+      <div class="row">
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- First Carousel Item -->
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="testimonial-card p-3">
+                    <img
+                      src="../assets/brands/j-dot/m-JANAN SPORT.jpg"
+                      class="testimonial-img-top"
+                      alt="Product 1"
+                      style="width: 100px; height: auto; margin-bottom: 15px"
+                    />
+                    <div class="testimonial-body">
+                      <h5 class="testimonial-title">Great Products!!</h5>
+                      <p class="testimonial-text">
+                        Sprays also facilitate cooling systems...
+                      </p>
+                      <p class="testimonial-author">
+                        <small class="text-muted">Ewan Sharpe, Developer</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="testimonial-card p-3">
+                    <img
+                      src="../assets/brands/j-dot/w-BREEZE.jpg"
+                      class="testimonial-img-top"
+                      alt="Product 2"
+                      style="width: 100px; height: auto; margin-bottom: 15px"
+                    />
+                    <div class="testimonial-body">
+                      <h5 class="testimonial-title">Great Customer Support</h5>
+                      <p class="testimonial-text">
+                        Agriculture benefits significantly...
+                      </p>
+                      <p class="testimonial-author">
+                        <small class="text-muted">John Doe, Client</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Carousel Item -->
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="testimonial-card p-3">
+                    <img
+                      src="../assets/brands/j-dot/w-marjaan.jpg"
+                      class="testimonial-img-top"
+                      alt="Product 3"
+                      style="width: 100px; height: auto; margin-bottom: 15px"
+                    />
+                    <div class="testimonial-body">
+                      <h5 class="testimonial-title">Excellent Quality!</h5>
+                      <p class="testimonial-text">
+                        These products have been a game-changer for our
+                        business...
+                      </p>
+                      <p class="testimonial-author">
+                        <small class="text-muted">Jane Smith, CEO</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="testimonial-card p-3">
+                    <img
+                      src="../assets/brands/j-dot/w-SMASH.jpg"
+                      class="testimonial-img-top"
+                      alt="Product 4"
+                      style="width: 100px; height: auto; margin-bottom: 15px"
+                    />
+                    <div class="testimonial-body">
+                      <h5 class="testimonial-title">Highly Recommend</h5>
+                      <p class="testimonial-text">
+                        Fantastic customer service and top-notch products...
+                      </p>
+                      <p class="testimonial-author">
+                        <small class="text-muted">Michael Brown, Manager</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Third Carousel Item -->
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="testimonial-card p-3">
+                    <div class="divImg">
+                      <img
+                        src="../assets/brands/j-dot/w-BLOSSOM.jpg"
+                        class="testimonial-img-top"
+                        alt="Product 5"
+                        style="width: 100px; height: auto; margin-bottom: 15px"
+                      />
+                    </div>
+
+                    <div class="testimonial-body">
+                      <h5 class="testimonial-title">Very Satisfied</h5>
+                      <p class="testimonial-text">
+                        The attention to detail in these products is
+                        incredible...
+                      </p>
+                      <p class="testimonial-author">
+                        <small class="text-muted">Sarah White, Designer</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="testimonial-card p-3">
+                    <img
+                      src="../assets/brands/j-dot/m-ZARAR BLEU2.jpg"
+                      class="testimonial-img-top"
+                      alt="Product 6"
+                      style="width: 100px; height: auto; margin-bottom: 15px"
+                    />
+                    <div class="testimonial-body">
+                      <h5 class="testimonial-title">Superb Experience</h5>
+                      <p class="testimonial-text">
+                        I would definitely purchase these products again...
+                      </p>
+                      <p class="testimonial-author">
+                        <small class="text-muted"
+                          >David Green, Consultant</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3rd Section End -->
+    <!-- single product end   -->
+
+    <!-- footer start  -->
+    <div class="footer">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h4 class="footer-heading" id="logo-Title">Paareees Perfume</h4>
+              <p>
+                Precision sprayers ensure targeted application, minimizing
+                environmental impact while maximizing crop yield and health.
+                Furthermore, irrigation systems utilize sprays to distribute
+                water efficiently.
+              </p>
+              <p>&copy; 2024, Paarees Perfume, Powered by BugHunterz.co</p>
+            </div>
+            <div class="col-md-2">
+              <h5>Navigation :</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Catalog</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5>About us:</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Shipping & Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5>Share:</h5>
+              <div class="social-icons">
+                <a href="#" class="material-icons">facebook</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer end  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

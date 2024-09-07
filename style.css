@@ -1,0 +1,592 @@
+:root {
+  --gold: #d4af37;
+}
+@import url("https://fonts.googleapis.com/css2?family=Condiment&family=Yellowtail&display=swap");
+* {
+  font-family: "Condiment", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+a:hover {
+  color: var(--gold) !important;
+}
+a:focus {
+  color: var(--gold) !important;
+}
+
+.btn-link-fa span {
+  color: #000;
+}
+
+.btn-primary {
+  background-color: black;
+  border: 2px solid white;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.btn-primary:hover {
+  background-color: white !important;
+  border: 2px solid black !important;
+  color: black !important;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #000;
+}
+.card-img-top {
+  max-height: 80px;
+}
+/* topbar start  */
+.topbar {
+  background-color: black;
+  color: white;
+}
+
+.topbar-inner {
+  border-bottom: 2px solid white;
+}
+.topbar-pg-list ul {
+  display: flex;
+}
+
+.topbar-pg-list li {
+  list-style-type: none;
+  margin-left: 10px;
+}
+.topbar-pg-list li a {
+  text-decoration: none;
+  color: white;
+}
+/* topbar end  */
+/* navbar start  */
+.navbar-toggler-icon {
+  filter: invert(1); /* Inverts color, so black becomes white and vice versa */
+}
+.navbar {
+  background-color: black;
+}
+.navbar a {
+  color: white;
+}
+.active {
+  color: white !important;
+}
+
+#logo-Title {
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
+.navbar-brand {
+  padding-right: 20px;
+  border-right: 2px solid white;
+}
+
+.nav-icons-fa {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  background-color: #000;
+  border-radius: 0px !important;
+}
+.dropdown-item:hover {
+  color: black !important;
+  background-color: var(--gold);
+}
+
+#addCart.selected {
+  background-color: #28a745; /* Green color to indicate selection */
+  color: #fff;
+}
+
+/* navbar end  */
+/* hero section start   */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.hero-sec {
+  height: 80vh;
+  background-image: url(assets/img/home-bg.png);
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 20%;
+}
+
+.hero-btns {
+  display: flex;
+}
+
+.hero-card-fa {
+  display: flex;
+  align-items: center;
+}
+
+.hr-icon {
+  font-size: 40px;
+  padding-right: 10px;
+}
+/* hero section end   */
+/* category section start  */
+.cat-cont {
+  color: white;
+}
+
+.cat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.68);
+}
+
+.cat-unisex {
+  background-image: url(assets/img/unisex-category.png);
+  padding-right: 20%;
+  padding-left: 5%;
+}
+
+.cat-men {
+  background-image: url(assets/img/men-category.png);
+}
+.cat-women {
+  background-image: url(assets/img/women-category.png);
+}
+/* category section end  */
+/* upcoming products start */
+.card-link {
+  text-decoration: none;
+  color: #000;
+}
+.card-product {
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-product img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  /* padding: 20px; */
+}
+.badge-discount,
+.badge-new {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--gold);
+  color: white;
+  border-radius: 50px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.card-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card-actions button {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #888;
+}
+.card-footer {
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--gold);
+}
+.old-price {
+  text-decoration: line-through;
+  font-size: 14px;
+  color: #888;
+}
+.btn-add-to-cart {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  padding: 8px 15px;
+  font-size: 14px;
+}
+/* upcoming products end */
+.custom-background {
+  background-image: url("assets/img/bg2.png"); /* Replace with your image path */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  height: 60vh; /* Set height to 60vh */
+  z-index: 1; /* Background should be at the lowest level */
+}
+
+.custom-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Lightened overlay */
+  z-index: 2; /* Overlay above the background but below the content */
+}
+
+.cont-bg {
+  z-index: 3; /* Content above both the overlay and the background */
+  position: relative; /* Ensure z-index is respected */
+  display: flex; /* Flexbox to center content */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  height: 100%; /* Ensure content fills the container */
+  text-align: center; /* Center text */
+}
+
+/* newsletter start  */
+.news-sec {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.news-sec img {
+  width: 80%;
+}
+.news-info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+
+.news-info-right p {
+  text-align: end;
+}
+.news-info-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+/* newsletter end  */
+/* email newsletter start  */
+.email-news-sec {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.email-news-head {
+  font-size: 3rem;
+}
+.email-info-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 80px;
+}
+.custom-input-group {
+  max-width: 500px;
+  margin: auto;
+}
+
+.custom-input {
+  border-radius: 50px 0 0 50px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+}
+
+.custom-button {
+  border-radius: 0 50px 50px 0;
+  padding: 0 15px;
+  background-color: black;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-button:hover {
+  border: 1px solid black;
+}
+/* email newsletter end  */
+/* footer start  */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 0;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .footer-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.footer .social-icons a {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 15px;
+  display: inline-block;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+.footer .social-icons a:hover {
+  color: #999;
+}
+/* footer end */
+
+/* Single Product Start*/
+.sp {
+  background-color: white;
+}
+.sp .img-box {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+.img-box {
+  max-height: 900px;
+}
+.img-box img {
+  width: 70%;
+}
+
+.sp-info {
+  background-color: #fff;
+  border-radius: 15px 0px 0px 0px;
+  padding-left: 30px;
+}
+
+.spacer {
+  height: 80vh;
+  background-color: #fff;
+}
+.info-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+}
+
+.back span {
+  border: 1px solid black;
+  border-radius: 25px;
+  margin-right: 5px;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.back p {
+  margin: 0px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* .review-stars {
+  padding: 10px;
+} */
+.review-btn {
+  /* padding: 0px 10px !important; */
+  height: 3rem;
+}
+
+.review-stars span {
+  font-size: 15px;
+}
+
+.sp-price b {
+  font-size: 2rem;
+}
+
+.sp-price span {
+  text-decoration: line-through;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.quantity-input {
+  width: 50px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.buy-btn {
+  display: flex;
+  align-items: center;
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+}
+/* 2nd Section of Single Product  */
+.sp-des {
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sp-des-img {
+  border-radius: 15px;
+  width: 100%;
+}
+
+/* 3rd Section  */
+.testimonial-card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+}
+
+.testimonial-card img {
+  border-radius: 10px;
+}
+.testimonial-img-top {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.testimonial-body {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.testimonial-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.testimonial-author {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none;
+}
+
+/* Single Product End*/
+/* Single Page Start  */
+.spp-title-sec {
+  background-color: #000;
+  padding: 50px 0px;
+}
+
+.spp-info-sec {
+  color: white !important;
+  padding-right: 15%;
+}
+
+.spp-snd-title {
+  padding: 0px 15%;
+}
+.spp-cards {
+  padding: 30px;
+}
+.spp-cards .cd {
+  border: 1px solid black;
+  padding: 20px;
+  margin-right: 0px;
+}
+.spp-card-head {
+  display: flex;
+  justify-content: space-between;
+}
+.spp-card-head span {
+  font-size: 2.5rem;
+  font-weight: 600 !important;
+}
+/* Single Page End  */
+@media screen and (max-width: 768px) {
+  .topbar {
+    display: none;
+  }
+  div.news-info-right {
+    align-items: center;
+  }
+  div.news-info-left {
+    align-items: center;
+  }
+  div.news-sec p {
+    text-align: center;
+  }
+  div.news-sec .imge {
+    display: flex;
+    justify-content: center;
+  }
+  .email-news-head {
+    font-size: 2rem;
+  }
+  .email-info-sec {
+    padding: 20px 20px;
+  }
+  .hero-sec {
+    height: 100%;
+    padding: 30px 04px;
+  }
+  .navbar-brand {
+    border: 0px;
+  }
+}

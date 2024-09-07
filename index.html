@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paareees Perfume</title>
+    <link
+      rel="shortcut icon"
+      href="assets/img/pp-fav.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- topbar start  -->
+    <div class="container-fluid topbar">
+      <div class="container topbar-inner">
+        <div class="row pt-2">
+          <div class="col-md-6">Monday - Friday 8:00 AM - 9:00 PM</div>
+          <div class="col-md-6 topbar-pg-list d-flex justify-content-end">
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- topbar end  -->
+    <!-- navbar start  -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" id="logo-Title" href="index.html"
+          >Paareees Perfumes</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product-archive.html">Products</a>
+            </li>
+            <!-- dropdown start  -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Brands
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="archive/calvin-klein.html">Calvin Klein</a></li>
+                <li><a class="dropdown-item" href="archive/j-dot.html">J. Jamshed</a></li>
+                <li><a class="dropdown-item" href="archive/christian-dior.html">Christiab Dior</a></li>
+                <li><a class="dropdown-item" href="archive/versace.html">Versace</a></li>
+              </ul>
+            </li>
+            <!-- dropdown end  -->
+            <!-- dropdown 2 start  -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Category
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="archive/category.html#men">Male </a></li>
+                <li><a class="dropdown-item" href="archive/category.html#female">Female</a></li>
+                <li><a class="dropdown-item" href="archive/category.html#unisex">Unisex</a></li>
+              </ul>
+            </li>
+            <!-- dropdown 2 end  -->
+          </ul>
+          <div class="nav-icons-fa">
+            <!-- <button type="button" class="btn btn-primary">
+              <span class="material-symbols-outlined"> person </span>
+            </button> -->
+            <button type="button" class="btn btn-primary" id="cart-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+              <span class="material-symbols-outlined">shopping_cart_checkout</span>
+              Cart <span id="selected-count">0</span>
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end  -->  
+         <!-- popup start  -->
+    <div
+    class="modal fade"
+    id="buyNowModal"
+    tabindex="-1"
+    aria-labelledby="buyNowModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="buyNowModalLabel">
+            Enter Your Details
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form id="buyNowForm">
+            <!-- Name Field -->
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required />
+              <div class="invalid-feedback">
+                Please enter a valid name (letters only).
+              </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required />
+              <div class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+
+            <!-- WhatsApp Number Field -->
+            <div class="mb-3">
+              <label for="whatsapp" class="form-label">WhatsApp Number</label>
+              <input type="tel" class="form-control" id="whatsapp" required />
+            </div>
+
+            <!-- Address Field -->
+            <div class="mb-3">
+              <label for="address" class="form-label">Address</label>
+              <textarea
+                class="form-control"
+                id="address"
+                rows="3"
+                required
+              ></textarea>
+              <div class="invalid-feedback">
+                Please provide a valid address.
+              </div>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="mb-3">
+              <label for="payment" class="form-label">Payment Method</label>
+              <input
+                type="text"
+                class="form-control"
+                id="payment"
+                value="Cash on Delivery"
+                readonly
+              />
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+
+          <!-- Thank You Message (Hidden initially) -->
+          <div id="thankYouMessage" style="display: none">
+            <p>Thank you for your purchase!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- popup end -->
+    <!-- cart section starts   -->
+     <!-- Cart Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 id="cartOffcanvasLabel">Your Cart</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Dummy Products -->
+    <div class="cart-item mb-3">
+      <h6>Product 1</h6>
+      <p>Quantity: 2</p>
+      <p>Price: $20</p>
+    </div>
+    <div class="cart-item mb-3">
+      <h6>Product 2</h6>
+      <p>Quantity: 1</p>
+      <p>Price: $15</p>
+    </div>
+    <div class="cart-item mb-3">
+      <h6>Product 3</h6>
+      <p>Quantity: 3</p>
+      <p>Price: $45</p>
+    </div>
+    
+    <!-- Total Price -->
+    <div class="cart-total mt-4">
+      <h5>Total: $80</h5>
+    </div>
+    
+    <!-- Checkout Button -->
+    <button class="btn btn-primary mt-3" data-bs-toggle="modal"
+    data-bs-target="#buyNowModal">Checkout</button>
+  </div>
+</div>
+
+    <!-- cart section end    -->
+    <div class="container-fluid hero-sec">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 col-sm-12 hero-info">
+            <span>Perfume</span>
+            <h1>Paareees Perfume</h1>
+            <p>
+              Discover the finest selection of fragrances on our perfume website. Explore an array of captivating scents for every occasion, with options for men, women, and unisex, all crafted to leave a lasting impression.
+            </p>
+            <div class="hero-btns">
+              <!-- <button type="button" class="btn btn-primary">
+                <span class="material-symbols-outlined">
+                  shopping_cart_checkout </span
+                >Primary
+              </button> -->
+              <button type="button" class="btn btn-primary" onclick="window.location.href='product-archive.html'">
+                <span class="material-symbols-outlined">
+                  shopping_cart_checkout </span
+                >View All
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <img src="assets/img/hero-img.png" class="hero-img" alt="" />
+          </div>
+        </div>
+        <!-- hero icons card  -->
+        <div class="row">
+          <div class="col-md-4 hero-card-fa">
+            <span class="material-symbols-outlined hr-icon">
+              featured_seasonal_and_gifts
+            </span>
+            <span>
+              <b>Finished products</b><br />
+              products and gift wrapping
+            </span>
+          </div>
+          <div class="col-md-4 hero-card-fa">
+            <span class="material-symbols-outlined hr-icon"> money_off </span>
+            <span>
+              <b>Large and frequent</b><br />
+              promotions with numerous discounts
+            </span>
+          </div>
+          <div class="col-md-4 hero-card-fa">
+            <span class="material-symbols-outlined hr-icon">
+              carry_on_bag
+            </span>
+            <span>
+              <b>Free shipping</b><br />
+              on any order from $ 150
+            </span>
+          </div>
+        </div>
+        <!-- hero icons card  -->
+      </div>
+    </div>
+    <!-- hero section end  -->
+    <!-- category sec start -->
+    <div class="container cat-cont mt-5 mb-5" id="cat-sec">
+      <div class="row justify-content-center row-gap-1 column-gap-3">
+        <div class="col-lg-5 col-md-6 col-sm-12 cat-unisex cat-card" onclick="window.location.href='archive/category.html#unisex'">
+          <h3>Unisex</h3>
+          <p>
+            Unisex perfumes offer a harmonious blend of scents, designed for anyone who values versatility and individuality.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 cat-men cat-card" onclick="window.location.href='archive/category.html#men'">
+          <h3>Male</h3>
+          <p>
+            Our male perfumes embody strength and sophistication, with bold and robust scents. From woody and spicy to fresh and citrusy.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 cat-women cat-card" onclick="window.location.href='archive/category.html#female'">
+          <h3>Female</h3>
+          <p>
+            Female perfumes celebrate elegance and grace, featuring soft, floral, and fruity notes. Designed to complement femininity.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- category sec end -->
+    <!-- upcoming products start  -->
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <h2 class="text-center">Top Selling Products</h2>
+      </div>
+      <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+        <!-- card 01  -->
+        <div class="col">
+          <a href="j-dot/exclusive.html" class="card-link">
+            <div class="card card-product position-relative">
+              <div class="badge-discount">20%</div>
+              <img
+                src="assets/brands/j-dot/m-EXCLUSIVE.jpg"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body text-center">
+                <p class="card-text">Male</p>
+                <h5 class="card-title">Exclusive Perfume J.</h5>
+                <div
+                  class="d-flex justify-content-center align-items-center mb-3"
+                ></div>
+
+                <div class="price">
+                  $05.00 <span class="old-price">$15.00</span>
+                </div>
+              </a>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary add-cart-btn">
+                  Add to Cart
+                </button>
+              </div>
+              <div class="card-actions">
+                <button>
+                  <span class="material-icons">favorite_border</span>
+                </button>
+                <button><span class="material-icons">sync_alt</span></button>
+                <button><span class="material-icons">visibility</span></button>
+              </div>
+            </div>
+        </div>
+        <!-- card 02  -->
+        <div class="col">
+          <a href="j-dot/janan.html" class="card-link">
+            <div class="card card-product position-relative">
+              <div class="badge-discount">20%</div>
+              <img
+                src="assets/brands/j-dot/m-JANAN GOLD3.jpg"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body text-center">
+                <p class="card-text">Male</p>
+                <h5 class="card-title">Janan Perfume J.</h5>
+                <div
+                  class="d-flex justify-content-center align-items-center mb-3"
+                ></div>
+
+                <div class="price">
+                  $12.00 <span class="old-price">$20.00</span>
+                </div>
+              </a>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary add-cart-btn">
+                  Add to Cart
+                </button>
+              </div>
+              <div class="card-actions">
+                <button>
+                  <span class="material-icons">favorite_border</span>
+                </button>
+                <button><span class="material-icons">sync_alt</span></button>
+                <button><span class="material-icons">visibility</span></button>
+              </div>
+            </div>
+        </div>
+        <!-- card 03  -->
+        <div class="col">
+          <a href="j-dot/jannan-sports.html" class="card-link">
+            <div class="card card-product position-relative">
+              <div class="badge-discount">20%</div>
+              <img
+                src="assets/brands/j-dot/m-JANAN SPORT.jpg"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body text-center">
+                <p class="card-text">Male</p>
+                <h5 class="card-title">Jannan Sports Perfume</h5>
+                <div
+                  class="d-flex justify-content-center align-items-center mb-3"
+                ></div>
+
+                <div class="price">
+                  $18.00 <span class="old-price">$23.00</span>
+                </div>
+              </a>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary add-cart-btn">
+                  Add to Cart
+                </button>
+              </div>
+              <div class="card-actions">
+                <button>
+                  <span class="material-icons">favorite_border</span>
+                </button>
+                <button><span class="material-icons">sync_alt</span></button>
+                <button><span class="material-icons">visibility</span></button>
+              </div>
+            </div>
+        </div>
+        <!-- card 04  -->
+        <div class="col">
+          <a href="j-dot/zarar-blue.html" class="card-link">
+            <div class="card card-product position-relative">
+              <div class="badge-discount">20%</div>
+              <img
+                src="assets/brands/j-dot/m-ZARAR BLEU2.jpg"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body text-center">
+                <p class="card-text">Male</p>
+                <h5 class="card-title">Zarar Blue Perfume</h5>
+                <div
+                  class="d-flex justify-content-center align-items-center mb-3"
+                ></div>
+
+                <div class="price">
+                  $13.00 <span class="old-price">$16.00</span>
+                </div>
+              </a>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary add-cart-btn">
+                  Add to Cart
+                </button>
+              </div>
+              <div class="card-actions">
+                <button>
+                  <span class="material-icons">favorite_border</span>
+                </button>
+                <button><span class="material-icons">sync_alt</span></button>
+                <button><span class="material-icons">visibility</span></button>
+              </div>
+            </div>
+        </div>
+        <!-- card end  -->
+      </div>
+    </div>
+
+    <!-- upcoming products end  -->
+    <!-- image hero sec start  -->
+    <div class="container-fluid custom-background">
+      <div
+        class="container cont-bg text-center text-white d-flex flex-column justify-content-center align-items-center"
+        style="height: 60vh"
+      >
+        <small class="mb-2">perfumes</small>
+        <h1 class="display-4 fw-bold">The Science and Art of perfumes</h1>
+        <p class="lead">
+          perfumes, in their essence, are a versatile form of dispersing liquid,
+          gas, or fine particles in the atmosphere or onto a surface.
+        </p>
+        <div class="mt-4">
+          <button onclick="window.location.href='archive/category.html'"
+            class="btn btn-outline-light btn-lg d-flex align-items-center" 
+          >
+            <span class="material-icons me-2">play_arrow</span> Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- image hero sec end -->
+    <!-- newsletter start  -->
+    <div class="container news-sec">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="news-info-right">
+            <h4>
+              <b>Power, and Practicality</b><br />
+              Manufacturing Processes
+            </h4>
+            <p>
+              perfumes, in their multifaceted forms, represent a diverse range of
+              applications across industries, sciences, arts, and daily life.
+            </p>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='archive/category.html#men'">
+              <span class="material-symbols-outlined">
+                shopping_cart_checkout </span
+              >Men's
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 imge">
+          <img src="assets/img/chocolate4.png" alt="" />
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="news-info-left">
+            <h4>
+              <b>The Artistry of Atomization</b><br />
+              Diving into Spray
+            </h4>
+            <p>
+              perfumes, in their multifaceted forms, represent a diverse range of
+              applications across industries, sciences, arts, and daily life.
+            </p>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='archive/category.html#female'">
+              <span class="material-symbols-outlined">
+                shopping_cart_checkout </span
+              >Female
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- newsletter end  -->
+    <!-- email newsletter start  -->
+    <div class="container email-news-sec">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-1"></div>
+        <div class="col-lg-8 col-md-8 col-sm-12 text-center">
+          <div class="email-info-sec">
+            <p class="email-news-head">
+              <b>Subscribe newsletter and</b><br />
+              <i>get -20% off</i>
+            </p>
+            <p>
+              perfumes play a crucial role in manufacturing, from cooling systems
+              in industrial machinery to lubrication processes and the creation
+              of various products.
+            </p>
+            <div class="input-group custom-input-group">
+              <input
+                type="email"
+                class="form-control custom-input"
+                placeholder="Enter email address..."
+                aria-label="Email address"
+              />
+              <button class="btn custom-button" type="button">
+                <span class="material-icons">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-1"></div>
+      </div>
+    </div>
+    <!-- email newsletter end  -->
+    <!-- footer start  -->
+    <div class="footer">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h4 class="footer-heading" id="logo-Title">Paareees Perfume</h4>
+              <p>
+                Precision sprayers ensure targeted application, minimizing
+                environmental impact while maximizing crop yield and health.
+                Furthermore, irrigation systems utilize perfumes to distribute
+                water efficiently.
+              </p>
+              <p>&copy; 2024, Paarees Perfume, Powered by BugHunterz.co</p>
+            </div>
+            <div class="col-md-2">
+              <h5>Navigation :</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Catalog</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5>About us:</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Shipping & Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5>Share:</h5>
+              <div class="social-icons">               
+                <a href="#" class="material-icons">facebook</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer end  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
